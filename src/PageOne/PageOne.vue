@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>{{ staticVersion }}</div>
-    <div>{{ dynamicVersion }}</div>
     <div>{{ singletonDynamicVersion }}</div>
+    <div>{{ dynamicVersion }}</div>
   </div>
 </template>
 
