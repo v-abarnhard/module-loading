@@ -1,7 +1,8 @@
 const hardCodedVersion = 1
 
-class VersionUtil {
+class VersionUtilSingleton {
   constructor() {
+    this.name = 'VersionUtilSingleton'
     this.version = hardCodedVersion
     this.serverPromise = new Promise((resolve, reject) => {
       fetch('/server-version.json')
@@ -14,4 +15,4 @@ class VersionUtil {
   }
 }
 
-export default new VersionUtil()
+export default new VersionUtilSingleton()

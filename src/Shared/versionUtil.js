@@ -2,6 +2,7 @@ const hardCodedVersion = 1
 
 class VersionUtil {
   constructor() {
+    this.name = 'VersionUtil'
     this.version = hardCodedVersion
     this.serverPromise = new Promise((resolve, reject) => {
       fetch('/server-version.json')
