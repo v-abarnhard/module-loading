@@ -1,8 +1,13 @@
 <template>
   <div>
-    <div>{{ staticVersion }}</div>
-    <div>{{ singletonDynamicVersion }}</div>
-    <div>{{ dynamicVersion }}</div>
+    <h2>Page Two internal version: {{internalVersion}}</h2>
+    <table>
+      <tbody>
+        <tr><td>Hardcoded Version</td><td>{{staticVersion}}</td></tr>
+        <tr><td>Server Singleton Version</td><td>{{singletonServerVersion}}</td></tr>
+        <tr><td>Server Version</td><td>{{dynamicVersion}}</td></tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -15,19 +20,20 @@ export default {
   name: 'PageTwo',
   data() {
     return {
+      internalVersion: 1,
       serverVersion: 'N/A',
       singletonServerVersion: 'N/A'
     }
   },
   computed: {
     staticVersion() {
-      return `Page Two hardcoded version: ${versionUtil.version}`
+      return versionUtil.version
     },
     dynamicVersion() {
-      return `Page Two server version: ${this.serverVersion}`
+      return this.serverVersion
     },
     singletonDynamicVersion() {
-      return `Page Two server singleton version: ${this.singletonServerVersion}`
+      return this.singletonServerVersion
     }
   },
   mounted() {
@@ -41,3 +47,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+  table {
+    margin: auto;
+  }
+</style>
