@@ -1,23 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>Home page version {{version}}</p>
+    <h1>Home Page</h1>
   </div>
 </template>
 
 <script>
-import VersionUtil from '@/Shared/versionUtil'
-const versionUtil = new VersionUtil()
-
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  },
-  computed: {
-    version() {
-      return versionUtil.version
-    }
   }
 }
 </script>
