@@ -38,5 +38,6 @@ export default {
   }
   table {
     margin: auto;
+    font-size: 40px;
   }
 </style>

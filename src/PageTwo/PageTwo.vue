@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Page Two</h2>
+    <h1>Page Two</h1>
     <table>
       <tbody>
         <tr><td>Component Version</td><td>{{internalVersion}}</td></tr>
@@ -51,5 +51,6 @@ export default {
 <style scoped>
   table {
     margin: auto;
+    font-size: 40px;
   }
 </style>
