@@ -33,8 +33,8 @@ module.exports = {
       config.plugin('html')
         .tap(options => {
           options[0].chunks = ['chunk-vendors', 'app']
-          options[0].template = './public/index.html'
-          options[0].filename = 'index.html'
+          options[0].template = './public/main.html'
+          options[0].filename = 'main.html'
           options[0].favicon = './public/favicon.ico'
           return options
         })
