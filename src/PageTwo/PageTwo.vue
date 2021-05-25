@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h2>Page Two internal version: {{internalVersion}}</h2>
+    <h2>Page Two</h2>
     <table>
       <tbody>
-        <tr><td>Hardcoded Version</td><td>{{staticVersion}}</td></tr>
-        <tr><td>Server Singleton Version</td><td>{{singletonServerVersion}}</td></tr>
-        <tr><td>Server Version</td><td>{{dynamicVersion}}</td></tr>
+        <tr><td>Component Version</td><td>{{internalVersion}}</td></tr>
+        <tr><td>Hardcoded Service Version</td><td>{{staticVersion}}</td></tr>
+        <tr><td>Service Singleton Version</td><td>{{singletonServerVersion}}</td></tr>
+        <tr><td>Service Instance Version</td><td>{{dynamicVersion}}</td></tr>
       </tbody>
     </table>
   </div>
