@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Router from 'vue-router'
-import Home from '@/components/HelloWorld'
+import HomePage from '@/HomePage/'
+
 Vue.use(Router)
 Vue.config.productionTip = false
 
@@ -13,7 +14,7 @@ const router = new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: HomePage
     },
     {
       path: '/page-one',
