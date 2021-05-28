@@ -3,10 +3,16 @@
     <h1>Page One</h1>
     <table>
       <tbody>
-        <tr><td>Component Version</td><td>{{internalVersion}}</td></tr>
-        <tr><td>Hardcoded Service Version</td><td>{{staticVersion}}</td></tr>
-        <tr><td>Service Singleton Version</td><td>{{singletonServerVersion}}</td></tr>
-        <tr><td>Service Instance Version</td><td>{{dynamicVersion}}</td></tr>
+        <tr><td>Component File Version</td><td>{{fileVersion}}</td></tr>
+      </tbody>
+    </table>
+    <h1>VersionUtil</h1>
+    <table>
+      <tbody>
+        <tr><td>Instance File Version</td><td>{{instanceFileVersion}}</td></tr>
+        <tr><td>Singleton File Version</td><td>{{singletonFileVersion}}</td></tr>
+        <tr><td>Singleton Data</td><td>{{singletonServerVersion}}</td></tr>
+        <tr><td>Instance Data</td><td>{{dynamicVersion}}</td></tr>
       </tbody>
     </table>
   </div>
@@ -21,14 +27,17 @@ export default {
   name: 'PageOne',
   data() {
     return {
-      internalVersion: 1,
+      fileVersion: 1,
       serverVersion: 'N/A',
       singletonServerVersion: 'N/A'
     }
   },
   computed: {
-    staticVersion() {
-      return versionUtil.version
+    instanceFileVersion() {
+      return versionUtil.fileVersion
+    },
+    singletonFileVersion() {
+      return singletonVersionUtil.fileVersion
     },
     dynamicVersion() {
       return this.serverVersion

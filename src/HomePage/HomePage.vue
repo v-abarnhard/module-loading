@@ -3,7 +3,7 @@
     <h1>Home Page</h1>
     <table>
       <tbody>
-        <tr><td>Component Version</td><td>{{internalVersion}}</td></tr>
+        <tr><td>Component File Version</td><td>{{fileVersion}}</td></tr>
       </tbody>
     </table>
   </div>
@@ -14,7 +14,7 @@ export default {
   name: 'HomePage',
   data() {
     return {
-      internalVersion: 1
+      fileVersion: 1
     }
   }
 }

@@ -1,9 +1,9 @@
-const hardCodedVersion = 1
+const fileVersion = 1
 
 class VersionUtilSingleton {
   constructor() {
     this.name = 'VersionUtilSingleton'
-    this.version = hardCodedVersion
+    this.fileVersion = fileVersion
     this.serverPromise = new Promise((resolve, reject) => {
       fetch('/server-version.json')
       .then((response) => response.json())
